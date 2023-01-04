@@ -9,7 +9,10 @@ description: 描述一下这个页面的概要
 
 ## 准备工作
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur. `quorum` 不错
+
+这是 `中文` 的 code
+
 
 ### 安装依赖
 
