@@ -18,3 +18,8 @@
   border: 1px solid #666;
   opacity: 0.75;
 }
+
+.prose * {
+  box-shadow: none !important;
+  word-break: break-all;
+}

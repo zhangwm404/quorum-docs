@@ -103,7 +103,7 @@ export function Layout({ children, title, navigation, tableOfContents }) {
             <div className="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-900 dark:block" />
             <Navigation
               navigation={navigation}
-              className="w-64 pr-8 xl:w-72 xl:pr-16"
+              className="w-48 pr-8 2xl:w-64 xl:pr-16"
             />
           </div>
         </div>
