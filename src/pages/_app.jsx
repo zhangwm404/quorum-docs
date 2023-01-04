@@ -15,6 +15,10 @@ const navigation = [
     ],
   },
   {
+    title: '节点',
+    links: [{ title: '运行全节点', href: '/docs/run-fullnode' }],
+  },
+  {
     title: '种子网络',
     links: [
       { title: '创建种子网络', href: '/docs/create-group' },
@@ -29,7 +33,11 @@ const navigation = [
       { title: '获取内容', href: '/docs/get-trx' },
     ],
   },
-];
+  {
+    title: '参与 quorum 开发',
+    links: [{ title: '源码编译 quorum', href: '/docs/build-quorum' }],
+  },
+]
 
 function getNodeText(node) {
   let text = ''
@@ -49,7 +57,7 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
     if (/^h[23]$/.test(node.name)) {
       let title = getNodeText(node)
       if (title) {
-        let id = slugify(title) || simpleHash(title);
+        let id = slugify(title) || simpleHash(title)
         node.attributes.id = id
         if (node.name === 'h3') {
           sections[sections.length - 1].children.push({
@@ -68,15 +76,15 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
   return sections
 }
 
-const simpleHash = str => {
-  let hash = 0;
+const simpleHash = (str) => {
+  let hash = 0
   for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash &= hash; // Convert to 32bit integer
+    const char = str.charCodeAt(i)
+    hash = (hash << 5) - hash + char
+    hash &= hash // Convert to 32bit integer
   }
-  return new Uint32Array([hash])[0].toString(36);
-};
+  return new Uint32Array([hash])[0].toString(36)
+}
 
 export default function App({ Component, pageProps }) {
   let title = pageProps.markdoc?.frontmatter.title
