@@ -28,9 +28,9 @@ function Header({ navigation }) {
   return (
     <header
       className={clsx(
-        'sticky top-0 z-50 flex flex-wrap items-center justify-between bg-white px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8',
+        'sticky top-0 z-50 flex flex-wrap items-center justify-between bg-white px-4 py-5 shadow-md shadow-[#0D1117]/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8',
         {
-          'dark:bg-slate-900/95 dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75':
+          'dark:bg-[#0D1117]/95 dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-[#0D1117]/75':
             isScrolled,
           'dark:bg-transparent': !isScrolled,
         }
@@ -100,7 +100,7 @@ export function Layout({ children, title, navigation, tableOfContents }) {
           <div className="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden" />
           <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto py-16 pl-0.5">
             <div className="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />
-            <div className="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-800 dark:block" />
+            <div className="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-900 dark:block" />
             <Navigation
               navigation={navigation}
               className="w-64 pr-8 xl:w-72 xl:pr-16"
@@ -117,7 +117,7 @@ export function Layout({ children, title, navigation, tableOfContents }) {
                   </p>
                 )}
                 {title && (
-                  <h1 className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">
+                  <h1 className="font-display text-3xl tracking-tight text-[#0D1117] dark:text-white">
                     {title}
                   </h1>
                 )}
@@ -128,7 +128,7 @@ export function Layout({ children, title, navigation, tableOfContents }) {
           <dl className="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
             {previousPage && (
               <div>
-                <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">
+                <dt className="font-display text-sm font-medium text-[#0D1117] dark:text-white">
                   Previous
                 </dt>
                 <dd className="mt-1">
@@ -142,7 +142,7 @@ export function Layout({ children, title, navigation, tableOfContents }) {
             )}
             {nextPage && (
               <div className="ml-auto text-right">
-                <dt className="font-display text-sm font-medium text-slate-900 dark:text-white">
+                <dt className="font-display text-sm font-medium text-[#0D1117] dark:text-white">
                   Next
                 </dt>
                 <dd className="mt-1">
