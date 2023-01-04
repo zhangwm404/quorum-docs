@@ -1,5 +1,5 @@
 pre[class*='language-'] {
-  color: theme('colors.slate.50');
+  color: #d4d4d4;
 }
 
 .token.tag,
@@ -8,7 +8,7 @@ pre[class*='language-'] {
 .token.selector .class,
 .token.selector.class,
 .token.function {
-  color: theme('colors.pink.400');
+  color: #61AEEE;
 }
 
 .token.attr-name,
@@ -16,32 +16,32 @@ pre[class*='language-'] {
 .token.rule,
 .token.pseudo-class,
 .token.important {
-  color: theme('colors.slate.300');
+  color: #C678DD;
 }
 
 .token.module {
-  color: theme('colors.pink.400');
+  color: #c586c0;
 }
 
 .token.attr-value,
 .token.class,
 .token.string,
 .token.property {
-  color: theme('colors.sky.300');
+  color: #ce9178;
 }
 
 .token.punctuation,
 .token.attr-equals {
-  color: theme('colors.slate.500');
+  color: #d4d4d4;
 }
 
 .token.unit,
 .language-css .token.function {
-  color: theme('colors.teal.200');
+  color: #d4d4d4;
 }
 
 .token.comment,
 .token.operator,
 .token.combinator {
-  color: theme('colors.slate.400');
+  color: #6a9955;
 }
