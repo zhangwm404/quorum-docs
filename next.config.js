@@ -9,4 +9,3 @@ const nextConfig = {
 }
 
 module.exports = withMarkdoc()(nextConfig)
-module.exports.assetPrefix = 'https://zhangwm404.github.io/quorum-docs'
