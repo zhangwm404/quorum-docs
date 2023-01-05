@@ -3,13 +3,13 @@
   display: none !important;
 }
 
-.prose p > code {
+.prose p > code,
+.prose li > code {
   padding: 3px 5px;
   color: #444;
   background: #F6F9FC;
   border: 1px solid #dde1e3;
   border-radius: 3px;
-  white-space: nowrap;
 }
 
 .dark .prose p > code {
