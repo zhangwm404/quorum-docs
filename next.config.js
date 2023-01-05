@@ -10,7 +10,5 @@ const nextConfig = {
 
 const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = {
-  assetPrefix: isProd ? 'https://zhangwm404.github.io/quorum-docs' : undefined,
-  withMarkdoc()(nextConfig),
-}
+module.exports = withMarkdoc()(nextConfig)
+exports.assetPrefix = isProd ? 'https://zhangwm404.github.io/quorum-docs' : undefined
