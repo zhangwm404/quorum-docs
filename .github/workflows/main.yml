@@ -1,0 +1,44 @@
+name: Github Pages Deploy
+
+on:
+  push:
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-deploy:
+    name: Build and deploy app
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/package.json') }} # TODO: Use yarn.lock instead, if that file exists in your repo.
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies 🔧
+        run: yarn install
+
+      - name: Build 🏗️
+        run: yarn build && yarn export
+
+      - name: Deploy to Github Pages 🚀
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: out
