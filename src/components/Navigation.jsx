@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import clsx from 'clsx'
 
 export function Navigation({ navigation, className }) {
-  let router = useRouter()
+  let router = useRouter();
 
   return (
     <nav className={clsx('text-base lg:text-sm', className)}>

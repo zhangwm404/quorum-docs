@@ -1,12 +1,13 @@
 import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
+import { useRouter } from 'next/router'
 
 import { Layout } from '@/components/Layout'
 
 import 'focus-visible'
 import '@/styles/tailwind.css'
 
-const navigation = [
+const navigationCN = [
   {
     title: '介绍',
     links: [
@@ -37,7 +38,40 @@ const navigation = [
     title: '参与 quorum 开发',
     links: [{ title: '源码编译 quorum', href: '/docs/build-quorum' }],
   },
-]
+];
+
+const navigationEN = [
+  {
+    title: '介绍(en)',
+    links: [
+      { title: '快速开始(en)', href: '/docs/en' },
+      { title: '安装向导(en)', href: '/docs/en/installation' },
+    ],
+  },
+  {
+    title: '节点(en)',
+    links: [{ title: '运行全节点(en)', href: '/docs/en/run-fullnode' }],
+  },
+  {
+    title: '种子网络(en)',
+    links: [
+      { title: '创建种子网络(en)', href: '/docs/en/create-group' },
+      { title: '获取种子网络(en)', href: '/docs/en/get-group' },
+      { title: '加入种子网络(en)', href: '/docs/en/join-group' },
+    ],
+  },
+  {
+    title: '内容(en)',
+    links: [
+      { title: '提交内容(en)', href: '/docs/en/submit-trx' },
+      { title: '获取内容(en)', href: '/docs/en/get-trx' },
+    ],
+  },
+  {
+    title: '参与 quorum 开发',
+    links: [{ title: '源码编译 quorum(en)', href: '/docs/en/build-quorum' }],
+  },
+];
 
 function getNodeText(node) {
   let text = ''
@@ -87,6 +121,9 @@ const simpleHash = (str) => {
 }
 
 export default function App({ Component, pageProps }) {
+  let router = useRouter();
+  const lang = router.pathname.includes('/docs/en') ? 'en' : 'cn';
+
   let title = pageProps.markdoc?.frontmatter.title
 
   let pageTitle = `${pageProps.markdoc?.frontmatter.title} - Rum Docs`
@@ -104,7 +141,7 @@ export default function App({ Component, pageProps }) {
         {description && <meta name="description" content={description} />}
       </Head>
       <Layout
-        navigation={navigation}
+        navigation={lang === 'cn' ? navigationCN : navigationEN}
         title={title}
         tableOfContents={tableOfContents}
       >

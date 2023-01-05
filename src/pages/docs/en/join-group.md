@@ -1,5 +1,5 @@
 ---
-title: 安装向导
+title: 加入种子网络
 description: 描述一下这个页面的概要
 ---
 
