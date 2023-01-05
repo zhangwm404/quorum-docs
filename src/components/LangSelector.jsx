@@ -40,7 +40,7 @@ export function LangSelector(props) {
       {...props}
     >
       <Listbox.Label className="sr-only">Lang</Listbox.Label>
-      <Listbox.Button className="flex h-6 px-2 text-sm items-center justify-center rounded-lg shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-800 dark:ring-inset dark:ring-white/5 text-gray-500 dark:text-gray-400">
+      <Listbox.Button className="flex h-6 px-2 text-sm items-center justify-center rounded-lg shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-800 dark:ring-inset dark:ring-white/5 text-gray-500 dark:text-gray-400 whitespace-nowrap">
         {langs.find(lang => lang.value === selectedLang)?.name}
       </Listbox.Button>
       <Listbox.Options className="absolute top-full left-1/2 mt-3 w-36 -translate-x-1/2 space-y-1 rounded-xl bg-white p-3 text-sm font-medium shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-slate-900 dark:ring-white/5">
