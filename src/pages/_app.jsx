@@ -9,7 +9,6 @@ import '@/styles/tailwind.css'
 
 const navigationCN = [
   {
-    expand: true,
     title: '介绍',
     links: [
       { title: '快速开始', href: '/' },
@@ -44,7 +43,6 @@ const navigationCN = [
 
 const navigationEN = [
   {
-    expand: true,
     title: '介绍(en)',
     links: [
       { title: '快速开始(en)', href: '/docs/en' },
