@@ -34,7 +34,8 @@ export function Tabs({ labels, children }) {
             }}
             className={clsx({
               'border-orange-500 text-orange-500': label === currentTab,
-            }, 'px-3 py-[2px] border border-gray-600 rounded-xl mr-2 text-sm cursor-pointer')}>
+              'border-gray-600 opacity-70 dark:opacity-100': label !== currentTab,
+            }, 'px-3 border rounded-xl mr-2 text-sm cursor-pointer text-[13px]')}>
             {label}
           </div>
         ))}

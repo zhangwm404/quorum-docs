@@ -19,7 +19,15 @@
   opacity: 0.75;
 }
 
-.prose * {
-  box-shadow: none !important;
-  word-break: break-all;
+code.fold {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+code.expand {
+  max-height: unset !important;
+  -webkit-line-clamp: unset !important;
 }

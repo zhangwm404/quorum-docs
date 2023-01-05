@@ -90,6 +90,16 @@ function getRandomInteger(min, max) {
 }
 const rndInt = getRandomInteger(1, 6)
 console.log(rndInt)
+function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+const rndInt = getRandomInteger(1, 6)
+console.log(rndInt)
+function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+const rndInt = getRandomInteger(1, 6)
+console.log(rndInt)
 ```
 {% /tab %}
 
