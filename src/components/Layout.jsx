@@ -41,7 +41,7 @@ function Header({ navigation }) {
       </div>
       <div className="relative flex flex-grow basis-0 items-center">
         <Link href="/">
-          <a className="block w-10 overflow-hidden lg:w-auto">
+          <a className="block w-16 overflow-hidden lg:w-auto">
             <span className="sr-only">Home page</span>
             <Logo />
           </a>
@@ -103,7 +103,7 @@ export function Layout({ children, title, navigation, tableOfContents }) {
             <div className="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-900 dark:block" />
             <Navigation
               navigation={navigation}
-              className="w-48 pr-8 2xl:w-64 xl:pr-16"
+              className="w-48 pr-8 2xl:w-64 xl:pr-4"
             />
           </div>
         </div>

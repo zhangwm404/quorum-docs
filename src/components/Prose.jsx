@@ -13,7 +13,7 @@ export function Prose({ as: Component = 'div', className, ...props }) {
         // links
         'prose-a:text-orange-500 prose-a:no-underline prose-a:font-normal',
         // pre
-        'prose-pre:rounded-xl prose-pre:bg-[#0D1117] prose-pre:shadow-lg dark:prose-pre:bg-slate-900/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-slate-300/10',
+        'prose-pre:rounded-xl prose-pre:bg-[#0D1117] prose-pre:shadow-lg dark:prose-pre:bg-slate-800/90 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-slate-300/10',
         // hr
         'dark:prose-hr:border-slate-800'
       )}

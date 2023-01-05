@@ -44,7 +44,7 @@ export function Fence({ children, language }) {
     >
       {({ className, style, tokens, getTokenProps }) => (
         <pre className={clsx(className, 'relative')} style={style}>
-          <div onClick={() => setCopied(true)} className="absolute top-1 right-1 opacity-70 cursor-pointer text-[16px] py-3 px-2 bg-[#0D1117]">
+          <div onClick={() => setCopied(true)} className="absolute top-1 right-1 opacity-70 cursor-pointer text-[16px] py-3 px-2 bg-[#0D1117] dark:bg-gray-800/90">
             {copied ? <MdCheck /> : <MdContentCopy />}
           </div>
           <code ref={codeRef} className={clsx({
