@@ -9,6 +9,7 @@ import '@/styles/tailwind.css'
 
 const navigationCN = [
   {
+    expand: true,
     title: '介绍',
     links: [
       { title: '快速开始', href: '/' },
@@ -35,6 +36,7 @@ const navigationCN = [
     ],
   },
   {
+    expand: true,
     title: '参与 quorum 开发',
     links: [{ title: '源码编译 quorum', href: '/docs/build-quorum' }],
   },
@@ -42,6 +44,7 @@ const navigationCN = [
 
 const navigationEN = [
   {
+    expand: true,
     title: '介绍(en)',
     links: [
       { title: '快速开始(en)', href: '/docs/en' },
@@ -68,6 +71,7 @@ const navigationEN = [
     ],
   },
   {
+    expand: true,
     title: '参与 quorum 开发',
     links: [{ title: '源码编译 quorum(en)', href: '/docs/en/build-quorum' }],
   },
