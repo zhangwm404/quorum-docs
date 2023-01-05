@@ -8,7 +8,5 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md'],
 }
 
-const isProd = process.env.NODE_ENV === 'production'
-
 module.exports = withMarkdoc()(nextConfig)
-exports.assetPrefix = isProd ? 'https://zhangwm404.github.io/quorum-docs' : undefined
+module.exports.assetPrefix = 'https://zhangwm404.github.io/quorum-docs'
