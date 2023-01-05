@@ -61,7 +61,7 @@ export function Fence({ children, language }) {
             ))}
           </code>
           {canExpand && !expand && (
-            <div className="absolute bottom-0 inset-x-0 flex justify-center text-2xl bg-gradient-to-t text-white/90 dark:text-white/70 from-[#777] dark:from-[#444] to-transparent dark:to-transparent py-[10px] cursor-pointer" onClick={() => {
+            <div className="absolute bottom-0 inset-x-0 flex justify-center text-2xl bg-gradient-to-t text-white/90 dark:text-white/70 from-[#888] dark:from-[#444] to-transparent dark:to-transparent pt-[20px] pb-[8px] cursor-pointer" onClick={() => {
               setExpand(true);
             }}>
               <HiChevronDoubleDown />
