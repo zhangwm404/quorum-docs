@@ -1,5 +1,5 @@
 ---
-title: 从源代码构建 quorum
+title: 从源代码构建 quorum（en）
 description: 如何从源代码编译 quorum
 ---
 

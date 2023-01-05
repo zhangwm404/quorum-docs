@@ -1,5 +1,5 @@
 ---
-title: 运行全节点
+title: 运行全节点（en）
 description: 介绍如何运行全节点
 ---
 

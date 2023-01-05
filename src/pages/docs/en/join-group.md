@@ -1,5 +1,5 @@
 ---
-title: 加入种子网络
+title: 加入种子网络（en）
 description: 描述一下这个页面的概要
 ---
 

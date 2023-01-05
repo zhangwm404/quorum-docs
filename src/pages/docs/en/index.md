@@ -1,5 +1,5 @@
 ---
-title: 快速开始
+title: 快速开始（en）
 description: 描述一下这个页面的概要
 ---
 
